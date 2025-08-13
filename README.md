@@ -17,7 +17,6 @@ The body field of the state object would be most useful as a JSON object. But yo
 - State versioning
 - Swagger/OpenAPI documentation
 - Docker containerization
-- Development and production configurations
 
 ## Technology Stack
 
@@ -25,7 +24,6 @@ The body field of the state object would be most useful as a JSON object. But yo
 - **Database**: Redis (using NRedisStack)
 - **Documentation**: Swagger/OpenAPI
 - **Containerization**: Docker & Docker Compose
-- **JSON Serialization**: Newtonsoft.Json
 
 ## Project Structure
 
@@ -37,13 +35,10 @@ The body field of the state object would be most useful as a JSON object. But yo
 │   └── StateController.cs # State management endpoints
 ├── Entities/              # Data models
 │   └── State.cs          # State entity definition
-├── Properties/           # Configuration files
-│   └── launchSettings.json
 ├── compose.yaml          # Docker Compose configuration
 ├── Dockerfile           # Container definition
 ├── Program.cs           # Application entry point
 ├── Startup.cs           # Service configuration
-└── appsettings*.json    # Application settings
 ```
 
 ## API Endpoints
@@ -139,13 +134,6 @@ docker run -p 8079:80 \
   -e RedisPassword=your-redis-password \
   sequence-state-service
 ```
-
-## Development Tasks
-
-Available VS Code tasks:
-- `build` - Build the project
-- `publish` - Publish the project
-- `watch` - Run with file watching for development
 
 ## API Documentation
 
