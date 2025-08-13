@@ -1,10 +1,14 @@
-# Sequence Services State
+# RESTful State API
 
 A RESTful ASP.NET Core Web API service for state management, providing persistent storage capabilities using Redis as the backing store.
 
 ## Overview
 
 The Sequence State Service is a microservice designed to handle state persistence and retrieval operations. It provides a simple API for storing and retrieving state objects with versioning support.
+
+Data is stored under a Guid and retrieved under the same.
+
+The body field of the state object would be most useful as a JSON object. But you do you.
 
 ## Features
 
